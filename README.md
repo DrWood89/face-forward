@@ -8,9 +8,8 @@ Let's make goals!
 ### 1-Description
 ### 2-Technologies
 ### 3-Challenges
-### 4-Issues
-### 5-Desired Features
-### 6-Contributors
+### 4-Desired Features
+### 5-Contributors
 
 ---
 ### 1-Description
@@ -48,7 +47,7 @@ You can update your information, upload or change a picture, or change your pass
 Some of the challenges presented by this project include: setting up user authentication with passport and express-session; tracking project complexity through routes, controllers, handlebars files, and client-side javascript; and detailed database queries with Sequelize - specifically, using offsets and limits in conjunction with "show more results" buttons on the client side; and nesting sequelize queries in callback functions inside other queries. A fun project overall, and definitely a learning experience.
 
 ---
-### 5-Future Development
+### 4-Future Development
   Below is a list of possible features that I would like to add to the project.
 1.  When a task's creator drops the task and no one else has picked it up, the task is removed from the database.
 2.  Possibly linking with imgur.com as a place to post pictures related to tasks.
@@ -59,7 +58,7 @@ Some other ideas:
 3.  Create a more robust rating system that would boost point scores if a task has been rating by a large number of users
 
 ---
-### 6-Contributors
+### 5-Contributors
 - [Wood Jerry Remelus](https://github.com/DrWood89/)
 - Keith Allmon
 - Jason Hansen
