@@ -1,0 +1,28 @@
+<div class="tasks-div">
+
+  <div class="empty-header"></div>
+  {{!--
+  <nav class="filter-btn-nav">
+    <h4>Filter By:</h4>
+    <a href="/search/user/{{user.username}}" class="filter-link">All</a>
+    <a href="/search/filter/{{user.id}}/Task" class="filter-link">Task</a>
+    <a href="/search/filter/{{user.id}}/Goal" class="filter-link">Goal</a>
+    <a href="/search/filter/{{user.id}}/Bucket List" class="filter-link">Bucket List</a>
+    <a href="/search/filter/{{user.id}}/Idea" class="filter-link">Idea</a>
+  </nav> --}}
+
+  <div class="task-display">
+    <h3>Item Details</h3>
+      <ul>
+
+      {{#each tasks}}
+      <li class="task-li">
+      {{> tasks/each-task-block}}
+      <button data-task-id="{{id}}" class="add-task task-btn">Add to My List</button>
+      </li>
+      {{/each}}
+
+    </ul>
+  </div>
+
+</div>

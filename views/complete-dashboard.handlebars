@@ -1,0 +1,60 @@
+<header>
+  <h1>face</h1>
+  <h1 class="italicized">forward</h1>
+  <p id="user-name" data-user-id="{{user.id}}">logged in as {{user.firstname}} &nbsp;&nbsp;|
+    <a class="logout-link" href="/logout">logout</a>
+  </p>
+</header>
+
+<div class="user-profile">
+  {{#if user.image_url}}
+    <img src="{{user.image_url}}" alt="user photo" class="user-img">
+  {{else}}
+    <img src="/assets/images/user-placeholder.jpg" alt="placeholder user image" class="user-img">
+  {{/if}}
+
+  <div class="user-stats-div">
+    <h3>{{user.firstname}} {{user.lastname}}</h3>
+    <h4>Username: {{user.username}}</h4>
+    <h4>Points: {{toInt user.total_points}}</h4>
+  </div>
+</div>
+
+<div class="navigation-div">
+  <h4>Navigation</h4>
+  <a class="navigation-link" href="/public" id="all-tasks-btn">All Items</a>
+  <a class="navigation-link" href="/dashboard">My Current Items</a>
+</div>
+
+<div class="main-content">
+
+  <div class="task-display-div">
+    <div class="empty-header"></div>
+    <div class="past-tasks task-display">
+      <h3>My Completed Items</h3>
+      <ul>
+        {{#each tasks}}
+          <li class="task-li">
+            <h3>
+              {{dataValues.item_name}}
+            </h3>
+            <h4>
+              {{dataValues.category}}
+            </h4>
+            <p>
+              {{dataValues.criteria}}
+            </p>
+            <p>
+              Completion Date: {{dataValues.createdAt}}
+            </p>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+
+  <div class="user-form-div">
+    {{> forms/user-form-block}}
+  </div>
+
+</div>

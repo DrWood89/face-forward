@@ -1,0 +1,24 @@
+<header>
+  <h1>face</h1>
+  <h1 class="italicized">forward</h1>
+  <p id="user-name" data-user-id="{{logUser.id}}">logged in as {{logUser.firstname}} &nbsp;&nbsp;|
+    <a class="logout-link" href="/logout">logout</a>
+  </p>
+</header>
+
+<div class="navigation-div">
+  <h4>Navigation</h4>
+  <a class="navigation-link" href="/dashboard" id="all-tasks-btn">My Profile</a>
+</div>
+
+<div class="main-content">
+
+  <div class="task-display-div">
+    {{> dashboards/public-dashboard-block}}
+  </div>
+
+  <div class="task-form-div">
+    {{> forms/public-form-block}}
+  </div>
+
+</div> 

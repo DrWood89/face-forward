@@ -1,0 +1,28 @@
+<div class="tasks-div">
+
+  <div class="filter-btn-div">
+    <a href="/public" class="filter-link">All</a>
+    <a href="/public/Task" class="filter-link">Tasks</a>
+    <a href="/public/Goal" class="filter-link">Goals</a>
+    <a href="/public/Bucket List" class="filter-link">Bucket List</a>
+    <a href="/public/Idea" class="filter-link">Ideas</a>
+  </div>
+
+  <div class="task-display">
+    <h3>All Items</h3>
+    <ul>
+
+      {{#each tasks}}
+      <li class="task-li">
+        {{> tasks/each-task-block}}
+        <button data-task-id="{{id}}" class="add-task task-btn">Add to My List</button>
+      </li>
+      {{/each}}
+      {{#if resultsLength}}
+        <a href="/public/more/{{resultsLength}}">Show More</a>
+      {{/if}}
+
+    </ul>
+  </div>
+
+</div>
